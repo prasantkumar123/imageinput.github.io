@@ -1,0 +1,57 @@
+<!-- Created by Prasant🔥⚡💖💕 -->
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Page Title</title>
+
+        <style>
+
+            img{
+
+                height:200px;
+
+                width:150px;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+    <input type="file" name="image" id="imageinp">
+
+    <button id="btn" onclick="fun()">click</button>
+
+    <img src="" id="image">
+
+       <script>
+
+          function fun(){
+
+          
+
+              var x = URL.createObjectURL(document.getElementById("imageinp").files[0]);
+
+              console.log(x);
+
+              var y = document.getElementById("image");
+
+              y.src = x;
+
+          }
+
+          
+
+       </script> 
+
+    </body>
+
+</html>
