@@ -40,12 +40,17 @@
 
               var x = URL.createObjectURL(document.getElementById("imageinp").files[0]);
 
-              
-             let reader = new FileReader();
-              reader.readAsDataURL(blob);
+              var canvas = document.createElement("canvas")
+
+var context = canvas.getContext("2d")
+
+context.drawImage(x, 0, 0) // i assume that img.src is your blob url
+
+var dataurl = canvas.toDataURL("jpg", hd)
+             
               var y = document.getElementById("imageinp");
 
-              y.src = reader;
+              y.src = dataurl;
 
           }
 
