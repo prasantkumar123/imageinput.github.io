@@ -40,11 +40,12 @@
 
               var x = URL.createObjectURL(document.getElementById("imageinp").files[0]);
 
-              console.log(x);
+              
+             let reader = new FileReader();
+              reader.readAsDataURL(blob);
+              var y = document.getElementById("imageinp");
 
-              var y = document.getElementById("image");
-
-              y.src = x;
+              y.src = reader;
 
           }
 
